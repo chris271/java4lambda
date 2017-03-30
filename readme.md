@@ -12,3 +12,5 @@ Empty repo to Java AWS Lambda
 5. Setup Java project
     * get gradle wrapper
     * setup build.gradle
+    * add java code
+    * reopen into intellij to make gradle project

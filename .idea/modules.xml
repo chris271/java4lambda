@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/java4lambda.iml" filepath="$PROJECT_DIR$/.idea/java4lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java4lambda_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java4lambda_main.iml" group="java4lambda" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java4lambda_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java4lambda_test.iml" group="java4lambda" />
     </modules>
   </component>
 </project>
