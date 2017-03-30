@@ -14,3 +14,28 @@ Empty repo to Java AWS Lambda
     * setup build.gradle
     * add java code
     * reopen into intellij to make gradle project
+6. Setup AWS files that live in git
+    * Create bucket in s3
+    * Add CloudFormation input template
+    * Add buildspec.yml
+      * add aws cloudformation install command that produces output template
+      * include output template in artifact
+7. Create new role in AWS IAM
+    * Role Type: AWS CloudFormation
+    * Attach Policy: AWS Lambda Execute
+    * Inline Custom Role Policy
+      * copy from aws/cloudformation-role-policy.json
+      * from http://docs.aws.amazon.com/lambda/latest/dg/automating-deployment.html
+      * replace account-id and region, from upper right in aws console header
+      * account-id=061121813127
+      * region=us-east-1 
+8. Create pipeline in AWS CodePipeline
+    * Link to AWS CodeCommit repo
+    * Create AWS CodeBuild project
+      * Use AWS CodeBuild image: aws/codebuild/java:openjdk-8
+    * Deployment provider AWS CloudFormation
+      * Create or replace change set
+      * template file = output template in #6
+      * CAPABILITY_IAM
+      * Use role in #7 for pipeline role
+    * Create new IAM role for AWS Service Role
