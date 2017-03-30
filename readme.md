@@ -9,4 +9,6 @@ Empty repo to Java AWS Lambda
 4. git clone, open in IntelliJ
     * create readme.md ;)
     * create .gitignore
-      
+5. Setup Java project
+    * get gradle wrapper
+    * setup build.gradle
