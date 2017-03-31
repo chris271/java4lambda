@@ -39,3 +39,10 @@ Empty repo to Java AWS Lambda
       * CAPABILITY_IAM
       * Use role in #7 for pipeline role
     * Create new IAM role for AWS Service Role
+9. Pipeline will automatically run.
+    * If it doesn't succeed (maybe some yml files not checked in) the pipeline won't be configured correctly (!)
+10. Modify pipeline, modify Beta stage
+    * Add action below
+    * Deploy
+    * Delpoyment provider: AWS CloudFormation
+    * Action Mode: Execute a Change Set
