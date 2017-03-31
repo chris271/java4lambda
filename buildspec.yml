@@ -5,7 +5,7 @@ phases:
     commands:
       - chmod +x gradlew
       - ./gradlew build
-  install:
+  post_build:
     commands:
       - aws cloudformation package --template-file cloudformation-input-template.yml --s3-bucket java4lambda-bucket --output-template-file output-template.yml
 
