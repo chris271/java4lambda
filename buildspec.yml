@@ -11,6 +11,5 @@ phases:
 
 artifacts:
   files:
-    - build/distributions/java4lambda.zip
     - output-template.yml
   discard-paths: yes

@@ -46,3 +46,6 @@ Empty repo to Java AWS Lambda
     * Deploy
     * Delpoyment provider: AWS CloudFormation
     * Action Mode: Execute a Change Set
+
+Open questions
+* aws cloudformation package command executed appears to upload to s3. how does this differ from files present in buildspec.yml?
