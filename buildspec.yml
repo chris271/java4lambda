@@ -1,15 +1,19 @@
-version: 0.1
+version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - chmod +x gradlew
-      - ./gradlew build
+      - echo Build started on `date`
+      - mvn install
   post_build:
     commands:
-      - aws cloudformation package --template-file cloudformation-input-template.yml --s3-bucket java4lambda-bucket --output-template-file output-template.yml
-
+      - echo Build completed on `date`
 artifacts:
   files:
-    - output-template.yml
-  discard-paths: yes
+    - target/messageUtil-1.0.jar
